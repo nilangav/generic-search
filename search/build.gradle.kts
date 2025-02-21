@@ -3,6 +3,7 @@ plugins {
 }
 
 dependencies {
-    compileOnly("org.jooq:jooq")
+    implementation("org.jooq:jooq")
     implementation("com.fasterxml.jackson.core:jackson-databind:2.18.2")
+    implementation("org.reactivestreams:reactive-streams:1.0.4")
 }

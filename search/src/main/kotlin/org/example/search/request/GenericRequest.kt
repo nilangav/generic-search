@@ -2,7 +2,7 @@ package org.example.search.request
 
 import java.io.Serializable
 
-class EnterpriseGetRowsRequest(
+class GenericRequest(
     var startRow: Int = 0,
     var endRow: Int = 0,
     var rowGroupCols: List<ColumnVO> = emptyList(),
@@ -11,5 +11,5 @@ class EnterpriseGetRowsRequest(
     var isPivotMode: Boolean = false,
     var groupKeys: List<String> = emptyList(),
     var filterModel: Map<String, ColumnFilter> = emptyMap(),
-    var sortModel: List<SortModel> = emptyList()
+    var sortModel: List<SortModel> = emptyList(),
 ) : Serializable
