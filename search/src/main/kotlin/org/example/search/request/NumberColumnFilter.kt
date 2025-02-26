@@ -1,7 +1,9 @@
 package org.example.search.request
 
+import org.example.search.enum.FilterType
+
 data class NumberColumnFilter(
-    var type: String? = null,
+    var type: FilterType? = null,
     var filter: Int? = null,
     var filterTo: Int? = null,
 ) : ColumnFilter()

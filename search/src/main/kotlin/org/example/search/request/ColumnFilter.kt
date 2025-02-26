@@ -2,6 +2,7 @@ package org.example.search.request
 
 import com.fasterxml.jackson.annotation.JsonSubTypes
 import com.fasterxml.jackson.annotation.JsonTypeInfo
+import org.example.search.enum.JoinOperator
 
 @JsonTypeInfo(
     use = JsonTypeInfo.Id.NAME,
@@ -14,8 +15,13 @@ import com.fasterxml.jackson.annotation.JsonTypeInfo
         name = "number",
     ),
     JsonSubTypes
-        .Type(value = SetColumnFilter::class, name = "set"),
+        .Type(
+            value = SetColumnFilter::class,
+            name = "set",
+        ),
 )
 abstract class ColumnFilter {
-    open var filterType: String? = null
+    var filterType: String? = null
+    var operator: JoinOperator? = null
+    var conditions: List<ColumnFilter>? = null
 }
