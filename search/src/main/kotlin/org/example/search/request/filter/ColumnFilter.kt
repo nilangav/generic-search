@@ -1,4 +1,4 @@
-package org.example.search.request
+package org.example.search.request.filter
 
 import com.fasterxml.jackson.annotation.JsonSubTypes
 import com.fasterxml.jackson.annotation.JsonTypeInfo

@@ -1,5 +1,6 @@
 package org.example.search.request
 
+import org.example.search.request.filter.ColumnFilter
 import java.io.Serializable
 
 class GenericRequest(

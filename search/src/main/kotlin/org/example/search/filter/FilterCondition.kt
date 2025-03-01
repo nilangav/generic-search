@@ -1,7 +1,7 @@
 package org.example.search.filter
 
 import org.example.search.enum.JoinOperator
-import org.example.search.request.ColumnFilter
+import org.example.search.request.filter.ColumnFilter
 import org.jooq.Condition
 import org.jooq.Field
 
@@ -16,13 +16,10 @@ abstract class FilterCondition {
                 else -> throw IllegalArgumentException("Invalid")
             }
         } else {
-            getDslCondition(this.filter, field)
+            getDslCondition(field)
         }
 
-    abstract fun getDslCondition(
-        filter: ColumnFilter,
-        field: Field<Any>,
-    ): Condition
+    abstract fun getDslCondition(field: Field<Any>): Condition
 
     private fun joinByAnd(
         conditions: List<ColumnFilter>,
