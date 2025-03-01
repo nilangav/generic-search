@@ -1,8 +1,8 @@
 package org.example.search.query
 
 import org.example.search.filter.FilterConditionFactory
-import org.example.search.request.ColumnFilter
 import org.example.search.request.SortModel
+import org.example.search.request.filter.ColumnFilter
 import org.jooq.Condition
 import org.jooq.Field
 import org.jooq.SortField
